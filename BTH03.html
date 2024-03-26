@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>  Cửa hàng hoa tươi </title>
+    <title> Hover sản phẩm </title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <body>
     <div class="card">
@@ -14,10 +14,10 @@
             <i class='bx bx-cart-add' ></i>
         </div>
         <div class="card_img">
-            <img src="C:\Users\84393\Downloads\HOA TULIP.jpg" alt="">
+            <img src="C:\Users\84393\Desktop\BTH03\HOA TULIP.jpg" alt="">
         </div>
         <div class="card_title">
-            Bóa hoa tulip
+            Giỏ Hoa Hồng
         </div>
         <div class="card_price">450.000 VNĐ</div>
         <div class="card_size">
@@ -75,7 +75,7 @@ body {
 }
 
 .card_heart {
-    color: rgb(0, 0, 0);
+    color: red;
     right: unset;
     left: 20px;
 }
@@ -106,7 +106,7 @@ body {
 }
 
 .card_title {
-    color: #f794cc;
+    color: #0000FF;
     text-align: center;
     font-weight: bold;
 }
@@ -130,13 +130,76 @@ body {
 .card_color span {
     width: 15px;
     height: 15px;
-    border-radius
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
 }
 
-.card_action {
-   
-  transform: scale(0.9)
-  
+.card_color_green {
+    background: green;
+}
+.card_color_red {
+    background: red;
+}
+.card_color_yellow {
+    background: rgb(202, 232, 9);
 }
 
+.card_action button {
+    background: var(--primary-color);
+    border: none;
+    outline: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-right: 10px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.card_action button:hover {
+    transform: scale(0.9);
+}
 
+.card:hover .card_img {
+    transform: translateY(-90px) rotate(-20deg);
+}
+
+.card:hover .card_title {
+    transform: translate(-35px, -70px);
+}
+
+.card:hover .card_price {
+    transform: translate(-117px, -72px);
+}
+
+.card_size {
+    margin-top: 150px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.card_size, .card_color, .card_action {
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.4s;
+}
+
+.card:hover .card_size,
+.card:hover .card_color,
+.card:hover .card_action {
+    visibility: visible;
+    opacity: 100;
+}
+
+.card:hover .card_size {
+    margin-top: -30px;
+}
+    </style>
+<script>
+    src="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/boxicón.min.js"
+</script>
+
+</body>
+</html>
